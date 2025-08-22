@@ -36,7 +36,6 @@ public class Main {
         System.out.println("Contém 20? " + possuiItem(numeros, 20));
     }
 
-    // Método genérico para imprimir qualquer tipo de lista
     public static <T> void imprimirLista(ArrayList<T> lista){
         for (T item : lista){
             System.out.println(item);
@@ -44,7 +43,6 @@ public class Main {
         System.out.println("----------------");
     }
 
-    // Método genérico para procurar item por posição
     public static <T> T procurarItem(ArrayList<T> lista, int posicao){
         if (posicao >= 0 && posicao < lista.size()) {
             return lista.get(posicao);
@@ -52,7 +50,6 @@ public class Main {
         return null; // ou lançar uma exceção se preferir
     }
 
-    // Método genérico para verificar se item existe na lista
     public static <T> boolean possuiItem(ArrayList<T> lista, T item){
         for (T elemento : lista){
             if (Objects.equals(elemento, item)){
@@ -62,17 +59,14 @@ public class Main {
         return false;
     }
 
-    // Método genérico para remover item (apenas a primeira ocorrência)
     public static <T> boolean removerItem(ArrayList<T> lista, T item){
         return lista.remove(item);
     }
 
-    // Método genérico para limpar a lista
     public static <T> void limparLista(ArrayList<T> lista){
         lista.clear();
     }
 
-    // Método genérico para inverter a lista
     public static <T> void inverterLista(ArrayList<T> lista){
         for (int i = 0, j = lista.size() - 1; i < j; i++, j--) {
             T temp = lista.get(i);
@@ -81,7 +75,6 @@ public class Main {
         }
     }
 
-    // Método genérico para adicionar múltiplos itens
     public static <T> void adicionarMultiplos(ArrayList<T> lista, T... itens){
         for (T item : itens) {
             lista.add(item);
