@@ -27,7 +27,6 @@ public class Main {
         System.out.println("-------------------------------");
         System.out.println("Procurar item: " + procurarItem(listaCompra, 5));
 
-        // Testando métodos genéricos com Integer
         ArrayList<Integer> numeros = new ArrayList<>();
         numeros.add(10);
         numeros.add(20);
